@@ -1,0 +1,54 @@
+{
+    "user" : {
+        "fullName": "Moses Moletsane",
+        "photo" : "images/moses.jpg",
+        "university": "University of Johannesburg",
+        "masters": "MSc candidate in Geography",
+        "passion": "environmental management",
+        "years": "six",
+        "interests": "climate change policies and nature-based tourism",
+        "research": "nature-based tourism in the Kruger National Park",
+        "supervisor": "Prof. Kelso and Dr. Giddy"
+    },
+    "city" : {
+        "name" : "Johannesburg",
+        "photo" : "images/paris.jpg",
+        "romance" : "Known as the City of Love and is considered one of the most romantic cities.",
+        "culture": "Home to some of the world's most famous museums and art galleries.",
+        "food": "Home to some of the best restaurants in France.",
+        "shop": "Has high-end fashion boutiques, vintage shops and flea markets."
+    },
+    "foreignLanguage" : {
+        "language" : "French",
+        "phrases" : [{
+            "englishPhrase" : "Good morning",
+            "foreignLanguage" : "Bonjour"
+        },
+        {
+            "englishPhrase" : "Nice to meet you",
+            "foreignLanguage" : "ravi de vous rencontrer"
+        },
+        {
+            "englishPhrase" : "Thank you",
+            "foreignLanguage" : "Merci"
+        }]
+    },
+    "favouriteSubjects" : [
+        {
+            "name" : "Ethics, Justice and RSA Environment",
+            "description" : "Increase the depth of understanding of the localized and situated nature of the environmental knowledge base and to interrogate the contesting perspectives and completing interests imbedded in the South African environment",
+            "photo" : "images/ethics.jpg"
+        },
+        {
+            "name" : "Strategic Environmental Planning",
+            "description" : "Provide knowledge competence about the strategic management of environmental resources in regions so that effective sustainable development can occur."
+            ,
+            "photo" : "images/sep.jpg"},
+        {
+            "name" : "Sustainable Cities",
+            "description" : "An advanced study on selected issues of sustainability in cities of the global South with particular emphasis on Southern Africa."
+            ,
+            "photo" : "images/urban.jpg"
+        }
+    ]
+}

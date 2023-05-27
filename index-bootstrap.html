@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <!--<script src="vite.config.js"></script>--> 
+</head>
+<body class="container-sm p-3 mb-2 bg-body">
+
+<!--Introduction-->
+<section class="text-center grid pt-5">
+    <div class="row">
+        <h1 class="text-body-secondary pb-5">About {{user.fullName}}</h1>
+
+    <div class="col-md-9 pe-2 ">
+        <p class="selector fw-light border-top border-bottom border-light-subtle pt-3 pb-3 mt-auto mb-auto" style="text-align: justify; font-size: 18px;">
+            I am a {{user.masters}} at the {{user.university}}. I am passionate about 
+            {{user.passion}} and have been studying it for {{user.years}} years (including 2023). I am interested in 
+            {{user.interests}} and have been working on {{user.research}} research since March 2023
+            under the supervision of {{user.supervisor}}.
+        </p>
+</div>
+    <div class="col-md-3">
+        <div class="row">
+        <img class="img-fluid img-thumbnail float-end" src="{{user.photo}}" alt="Graduate photo with qualification" >
+        <figcaption class="figure-caption pb-3">Moses Moletsane</figcaption>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<!--City-->
+<section class="text-center grid ">
+    <div class="row">
+                    <h2 class="text-body-secondary pb-2 pt-3">Favourite city outside SA</h2>
+          <div class="col-md-3">
+            <img src="{{city.photo}}" alt="Eiffel Tower" class="img-fluid img-thumbnail float-end">
+            <figcaption class="pb-3 figure-caption">Paris</figcaption>
+          </div>
+          <div class="col-md-9">
+                <ul class="list-unstyled text-start text-center selector fw-light border-top border-bottom border-light-subtle " style="text-align: justify; font-size: 18px;">
+                    <li class="mb-3" style="text-align: justify;"><mark>Romantic:</mark>{{city.romance}}</li>
+                    <li class="mb-3" style="text-align: justify;"><mark>Culture:</mark>{{city.culture}}</li>
+                    <li class="mb-3" style="text-align: justify;"><mark>Food:</mark>{{city.food}}</li>
+                    <li style="text-align: justify;"><mark>Shopping:</mark>{{city.shop}}</li>
+                </ul>
+                <p class="fw-light selector" style="text-align: justify; font-size: 18px;">{{city.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!--Foreign Language-->
+<section class="text-center grid">
+    <h2 class="text-body-secondary pb-2">Foreign Language</h2>
+    <p class="fw-light selector" style="text-align: justify; font-size: 18px;">The foreign languages 
+    I would like to learn is <strong>French</strong> because Paris is one of my favourite cities. 
+    The table below shows three phrases translated from Englsih to French.</p>
+
+        <table class="table table-bordered table-hover">
+            <caption>Table 1: French phrases translated from English</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th>English Phrase</th>
+                    <th>French Phrase</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each foreignLanguage.phrases}}
+                <tr>
+                <td>{{englishPhrase}}</td>
+                <td>{{foreignLanguage}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+</section>
+
+<!--Favourite Subjects-->
+<section class="text-center grid">
+<h2 class="text-body-secondary pb-2 pt-3">Qualifications and Favourite Subjects</h2>
+
+<table class="table table-bordered table-hover">
+    <caption>Table 2: Qualifications obtained and Institution</caption>
+    <thead class="table-dark">
+        <tr>
+            <th>Qualifications obtained</th>
+            <th>Name of institution</th>
+            <th>Year obtained</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td class="fw-light">BSc Honours in Geography</td>
+        <td class="fw-light">{{user.university}}</td>
+        <td class="fw-light">2022</td>
+        </tr>
+        <tr>
+            <td class="fw-light">BSc Geography and Environmental Management</td>
+            <td class="fw-light">{{user.university}}</td>
+            <td class="fw-light">2021</td>
+            </tr>
+    </tbody>
+</table>
+
+    <section class="bg-success bg-opacity-10 pe-4 ps-4 pt-4 pb-4 rounded border border-success">
+    <p class="fw-bold selector" style="text-align: justify; font-size: 18px;">My favourite tertiary subjects are:</p>
+    
+        <div class="row">
+            {{#each favouriteSubjects}}
+            <div class="col-md-4">
+                <p class="lead selector fw-semibold" style="font-size:15px ;">{{name}}</p>
+                <div class="d-flex flex-column">
+                    <img style="height: 150px; width: 250px;" class="text-center img-fluid img-thumbnail float-end ms-auto me-auto" src="{{photo}}" alt="{{name}} Photo">
+            <figcaption class="figure-caption pb-3 fst-italic" alt="{{name}} Photo">{{name}}</figcaption>
+            <p class="selector pb-2 fw-light border-top border-bottom border-success" style="text-align: justify; font-size: 13.5px;">{{description}}</p>
+                </div>
+            </div>
+            {{/each}}
+          </div>
+          
+</section>
+</body>
+</html>

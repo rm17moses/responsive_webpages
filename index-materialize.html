@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Materialize</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="styles.css" rel="stylesheet">
+</head>
+<body class="lime lighten-5 center-align">
+
+<!--Introduction-->
+<section class="container">
+    <div class="row">
+        <h4 class=" center-align z-depth-1">About {{user.fullName}}</h4>
+
+        <div class="col s12 m8">
+            <p class="lime lighten-4" style="font-size: 14px;">
+                I am a {{user.masters}} at the {{user.university}}. I am passionate about 
+                {{user.passion}} and have been studying it for {{user.years}} years (including 2023). I am interested in 
+                {{user.interests}} and have been working on {{user.research}} research since March 2023
+                under the supervision of {{user.supervisor}}.
+            </p>
+        </div>
+        <div class="col s12 m4">
+            <figure class="">
+            <img class="responsive-image circle hoverable" src="{{user.photo}}" alt="Graduate photo with qualification" style="width: 100%; height: 100%" >
+            <figcaption class="caption" >Moses Moletsane</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!--City-->
+<section class="container">
+    <h4 class=" center-align z-depth-1">Favourite city outside SA</h4>
+    <div class="row" style="overflow: hidden; margin-right: auto;">
+        <div class="col s12 m5 ">
+                <img class="hoverable responsive-image" src="{{city.photo}}" alt="Eiffel Tower">
+            <figcaption class="caption center-align z-depth-5">Eiffel Tower</figcaption>
+        </div>
+        <div class="col s12 m7 z-depth-5 hoverable card-panel">
+            <h6>Reasons to visit Paris:</h6>
+            <ul >
+                <li><mark>Romantic: </mark>{{city.romance}}</li>
+                <li><mark>Culture: </mark>{{city.culture}}</li>
+                <li><mark>Food: </mark>{{city.food}}</li>
+                <li><mark>Shopping: </mark>{{city.shop}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--Foreign Language-->
+<section class="container">
+    <h4 class=" center-align z-depth-1">Foreign Language</h4>
+    <p>The foreign languages 
+    I would like to learn is <strong>French</strong> because Paris is one of my favourite cities. 
+    The table below shows three phrases translated from Englsih to French.</p>
+
+    <table class="highlight">
+        <caption>Table 1: French phrases translated from English</caption>
+        <thead class="">
+            <tr>
+                <th>English Phrase</th>
+                <th>French Phrase</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each foreignLanguage.phrases}}
+            <tr>
+                <td>{{englishPhrase}}</td>
+                <td>{{foreignLanguage}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</section>
+
+<!--Favourite Subjects-->
+<section class="container">
+    <h4 class=" center-align z-depth-1">Qualifications and Favourite Subjects</h4>
+
+    <table class="highlight">
+        <caption>Table 2: Qualifications obtained and Institution</caption>
+        <thead class="">
+            <tr>
+                <th>Qualifications obtained</th>
+                <th>Name of institution</th>
+                <th>Year obtained</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="">BSc Honours in Geography</td>
+                <td class="">{{user.university}}</td>
+                <td class="">2022</td>
+            </tr>
+            <tr>
+                <td class="">BSc Geography and Environmental Management</td>
+                <td class="">{{user.university}}</td>
+                <td class="">2021</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="container light-green lighten-4 z-depth-5">
+    <p class=" center-align z-depth-1" style="text-align: justify; font-size: 18px;"><b>My favorite tertiary subjects are:</b></p>
+
+    <div class="row">
+        {{#each favouriteSubjects}}
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image" style="width: 100%; max-width: 470px; height: 200px ">
+              <img  src="{{photo}}" alt="{{name}} Photo">
+              <span class="card-title center-align z-depth-1" style="font-size: 14px; background-color: whitesmoke; color: black; padding: 10px;"><b>{{name}}</b></span>
+            </div>
+            <div class="card-content">
+              <p style="font-size: 13.5px;">{{description}}</p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      
+</section>
+</body>
+</html>
